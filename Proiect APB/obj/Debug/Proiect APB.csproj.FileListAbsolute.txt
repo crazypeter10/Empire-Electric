@@ -1,0 +1,36 @@
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\bin\Debug\Proiect APB.exe.config
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\bin\Debug\Proiect APB.exe
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\bin\Debug\Proiect APB.pdb
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\bin\Debug\System.Data.SqlClient.dll
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\bin\Debug\System.Data.SqlClient.xml
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csprojAssemblyReference.cache
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\MainWindow.g.cs
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\App.g.cs
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect APB_MarkupCompile.cache
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect APB_MarkupCompile.lref
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\MainWindow.baml
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect APB.g.resources
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect_APB.Properties.Resources.resources
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csproj.GenerateResource.cache
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csproj.CoreCompileInputs.cache
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csproj.CopyComplete
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect APB.exe
+C:\scoala\proiect ap baze anu3\Proiect APB\Proiect APB\obj\Debug\Proiect APB.pdb
+C:\Proiect APB\Proiect APB\Proiect APB\bin\Debug\Proiect APB.exe.config
+C:\Proiect APB\Proiect APB\Proiect APB\bin\Debug\Proiect APB.exe
+C:\Proiect APB\Proiect APB\Proiect APB\bin\Debug\Proiect APB.pdb
+C:\Proiect APB\Proiect APB\Proiect APB\bin\Debug\System.Data.SqlClient.dll
+C:\Proiect APB\Proiect APB\Proiect APB\bin\Debug\System.Data.SqlClient.xml
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csprojAssemblyReference.cache
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\MainWindow.g.cs
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\App.g.cs
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB_MarkupCompile.cache
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB_MarkupCompile.lref
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\MainWindow.baml
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.g.resources
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect_APB.Properties.Resources.resources
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csproj.GenerateResource.cache
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csproj.CoreCompileInputs.cache
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csproj.CopyComplete
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.exe
+C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.pdb
