@@ -35,9 +35,7 @@ namespace Proiect_APB
         public MainWindow()
         {
             InitializeComponent();
-            con = new SqlConnection("server=LAPTOP-TTDFATU1; Initial Catalog=electricitybill;Integrated Security=SSPI");
-         
-
+            con = new SqlConnection("server=DESKTOP-D5T114U\\SQLEXPRESS; Initial Catalog=electricitybill;Integrated Security=SSPI");
         }
       
 
@@ -50,12 +48,19 @@ namespace Proiect_APB
             cmd.Connection = con;
             cmd.CommandText = "SELECT * FROM customer where email_id='" + txtUser.Text + "' AND passsword='" + txtPass.Text + "'";
             dr = cmd.ExecuteReader();
+<<<<<<< HEAD
             if (dr.Read())
 
             {
                 string status="on";
                
                 cmd.CommandText="UPDATE  customer SET status=@status where email_id='"+txtUser.Text+"'";
+=======
+            if (dr.Read()) {
+                string status="on";
+
+                cmd.CommandText = "UPDATE  customer SET status=@status where email_id='" + txtUser.Text + "'";
+>>>>>>> 276d2093779cdff34ee6fcb9aedeefbd6a1de453
                 cmd.Parameters.AddWithValue("@status", status);
                 System.Windows.MessageBox.Show("Login as customer :sucess!");
                 this.Hide();
@@ -64,9 +69,11 @@ namespace Proiect_APB
                 form2.Show();
             }
             else
-            {
                 System.Windows.MessageBox.Show("Invalid Login please check username and password");
+<<<<<<< HEAD
             }
+=======
+>>>>>>> 276d2093779cdff34ee6fcb9aedeefbd6a1de453
 
             con.Close();
 
@@ -78,6 +85,15 @@ namespace Proiect_APB
             System.Environment.Exit(1);
         }
 
+<<<<<<< HEAD
       
+=======
+        private void UserBox_MouseLeftButtonDown(object sender, RoutedEventArgs e)
+        {
+            txtUser.Text = "";
+            //txtUser.Foreground = SystemColors.
+        }
+
+>>>>>>> 276d2093779cdff34ee6fcb9aedeefbd6a1de453
     }
 }
