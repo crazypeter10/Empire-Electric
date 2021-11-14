@@ -34,6 +34,7 @@ C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csproj.CoreCompileI
 C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.csproj.CopyComplete
 C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.exe
 C:\Proiect APB\Proiect APB\Proiect APB\obj\Debug\Proiect APB.pdb
+<<<<<<< Updated upstream
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.exe.config
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.exe
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.pdb
@@ -52,3 +53,25 @@ C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.cs
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.CopyComplete
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.exe
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.pdb
+=======
+C:\Proiect APB\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.exe.config
+C:\Proiect APB\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.exe
+C:\Proiect APB\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.pdb
+C:\Proiect APB\Empire-Electric\Proiect APB\bin\Debug\System.Data.SqlClient.dll
+C:\Proiect APB\Empire-Electric\Proiect APB\bin\Debug\System.Data.SqlClient.xml
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csprojAssemblyReference.cache
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\MainWindow.g.cs
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\App.g.cs
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB_MarkupCompile.cache
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB_MarkupCompile.lref
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\MainWindow.baml
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.g.resources
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect_APB.Properties.Resources.resources
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.GenerateResource.cache
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.CoreCompileInputs.cache
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.CopyComplete
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.exe
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.pdb
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Window1.g.cs
+C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Window1.baml
+>>>>>>> Stashed changes

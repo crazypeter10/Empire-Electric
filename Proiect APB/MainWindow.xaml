@@ -9,17 +9,16 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="781*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Log In" HorizontalAlignment="Left" Margin="423,268,0,0" VerticalAlignment="Top" Width="119" Height="40" Click="Button_Click" Grid.ColumnSpan="2"/>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="606,268,0,0" VerticalAlignment="Top" Width="119" Height="40" Click="Button_Click_1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="563,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" />
-        <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="563,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <Label Content="User" HorizontalAlignment="Left" Margin="474,84,0,0" VerticalAlignment="Top" Height="23" Width="35" RenderTransformOrigin="0.474,0.434" Grid.ColumnSpan="2"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="474,125,0,0" VerticalAlignment="Top" Height="23" Grid.ColumnSpan="2"/>
-        <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="242" Margin="62,66,0,0" VerticalAlignment="Top" Width="213" Source="electric_logo.jpg">
-            
-        </Image>
+        <Button Content="Log In " HorizontalAlignment="Left" Margin="377.3,268,0,0" VerticalAlignment="Top" Width="119" Height="40" Click="Button_Click" Grid.Column="2"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="593.3,268,0,0" VerticalAlignment="Top" Width="119" Height="40" Click="Button_Click_1" Grid.Column="2"/>
+        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="550.3,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2" />
+        <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="550.3,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <Label Content="User" HorizontalAlignment="Left" Margin="461.3,84,0,0" VerticalAlignment="Top" Height="23" Width="35" RenderTransformOrigin="0.474,0.434" Grid.Column="2"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="461.3,125,0,0" VerticalAlignment="Top" Height="23" Grid.Column="2"/>
+        <Image HorizontalAlignment="Left" Height="242" Margin="49.3,66,0,0" VerticalAlignment="Top" Width="213" Source="electric_logo.jpg" Grid.Column="2"/>
 
     </Grid>
 </Window>

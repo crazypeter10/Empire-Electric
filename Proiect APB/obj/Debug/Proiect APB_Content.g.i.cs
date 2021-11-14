@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("electric_logo.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons8-windows-8-cinema-the-flash-sign.ico")]
 
 
