@@ -75,3 +75,5 @@ C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.pdb
 C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Window1.g.cs
 C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Window1.baml
 >>>>>>> Stashed changes
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window1.g.cs
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window1.baml
