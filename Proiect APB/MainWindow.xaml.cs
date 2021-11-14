@@ -35,7 +35,7 @@ namespace Proiect_APB
         public MainWindow()
         {
             InitializeComponent();
-            con = new SqlConnection("server=DESKTOP-D5T114U; Initial Catalog=electricitybill;Integrated Security=SSPI");
+            con = new SqlConnection("server=DESKTOP-D5T114U\\SQLEXPRESS; Initial Catalog=electricitybill;Integrated Security=SSPI");
         }
       
 
