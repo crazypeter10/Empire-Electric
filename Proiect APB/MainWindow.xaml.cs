@@ -48,29 +48,26 @@ namespace Proiect_APB
             cmd = new SqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM admin where login_id='" + txtUser.Text + "' AND password='" + txtPass.Text + "'";
+            cmd.CommandText = "SELECT * FROM customer where email_id='" + txtUser.Text + "' AND passsword='" + txtPass.Text + "'";
             dr = cmd.ExecuteReader();
             if (dr.Read())
+
             {
-                System.Windows.MessageBox.Show("Login sucess");
+                string status="on";
+               
+                cmd.CommandText="UPDATE  customer SET status=@status where email_id='"+txtUser.Text+"'";
+                cmd.Parameters.AddWithValue("@status", status);
+                System.Windows.MessageBox.Show("Login as customer :sucess!");
+                this.Hide();
+                var form2 = new Window1();
+                form2.Closed += (s, args) => this.Close();
+                form2.Show();
             }
             else
             {
                 System.Windows.MessageBox.Show("Invalid Login please check username and password");
             }
-            con.Close();
-            con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM customers where login_id='" + txtUser.Text + "' AND password='" + txtPass.Text + "'";
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                System.Windows.MessageBox.Show("Login sucess");
-            }
-            else
-            {
-                System.Windows.MessageBox.Show("Invalid Login please check username and password");
-            }
+
             con.Close();
 
         }
@@ -81,6 +78,6 @@ namespace Proiect_APB
             System.Environment.Exit(1);
         }
 
-       
+      
     }
 }
