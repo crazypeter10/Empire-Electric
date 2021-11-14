@@ -38,7 +38,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="327.8,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Foreground="#FFB3B3B3" />
+        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="327.8,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Foreground="Black" />
         <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="327.8,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" RenderTransformOrigin="0.5,0.5" Foreground="Black"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="327.8,151,0,0" VerticalAlignment="Top" Height="23" Width="73" RenderTransformOrigin="0.474,0.434" Grid.Column="2" FontFamily="Segoe UI Semibold"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="327.8,219,0,0" VerticalAlignment="Top" Height="23" Grid.Column="2" Width="73" FontFamily="Segoe UI Semibold"/>
