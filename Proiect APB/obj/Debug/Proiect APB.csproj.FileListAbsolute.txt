@@ -55,7 +55,6 @@ C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.cs
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.CopyComplete
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.exe
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.pdb
-=======
 >>>>>>> 276d2093779cdff34ee6fcb9aedeefbd6a1de453
 C:\Proiect APB\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.exe.config
 C:\Proiect APB\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.exe
@@ -77,9 +76,6 @@ C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.exe
 C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.pdb
 C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Window1.g.cs
 C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Window1.baml
-<<<<<<< HEAD
-=======
 >>>>>>> Stashed changes
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window1.g.cs
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window1.baml
->>>>>>> 276d2093779cdff34ee6fcb9aedeefbd6a1de453

@@ -12,16 +12,6 @@
             <ColumnDefinition Width="13*"/>
             <ColumnDefinition Width="781*"/>
         </Grid.ColumnDefinitions>
-<<<<<<< HEAD
-        <Button Content="Log In " HorizontalAlignment="Left" Margin="377.3,268,0,0" VerticalAlignment="Top" Width="119" Height="40" Click="Button_Click" Grid.Column="2"/>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="593.3,268,0,0" VerticalAlignment="Top" Width="119" Height="40" Click="Button_Click_1" Grid.Column="2"/>
-        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="550.3,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2" />
-        <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="550.3,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
-        <Label Content="User" HorizontalAlignment="Left" Margin="461.3,84,0,0" VerticalAlignment="Top" Height="23" Width="35" RenderTransformOrigin="0.474,0.434" Grid.Column="2"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="461.3,125,0,0" VerticalAlignment="Top" Height="23" Grid.Column="2"/>
-        <Image HorizontalAlignment="Left" Height="242" Margin="49.3,66,0,0" VerticalAlignment="Top" Width="213" Source="electric_logo.jpg" Grid.Column="2"/>
-
-=======
         <Button Content="Log In " HorizontalAlignment="Left" Margin="303.8,321,0,0" VerticalAlignment="Top" Width="80" Height="40" Click="Button_Click" Grid.Column="2">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -68,19 +58,18 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Admin Login" Grid.Column="2" HorizontalAlignment="Left" Margin="220.8,370,0,0" VerticalAlignment="Top" Width="80" Height="40" RenderTransformOrigin="1,0.5">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FFCDB839" Offset="0"/>
-                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
->>>>>>> 276d2093779cdff34ee6fcb9aedeefbd6a1de453
+            <Button Content="Admin Login" Grid.Column="2" HorizontalAlignment="Left" Margin="220.8,370,0,0" VerticalAlignment="Top" Width="80" Height="40" RenderTransformOrigin="1,0.5">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFCDB839" Offset="0"/>
+                        <GradientStop Color="#FFEDF1B6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
     </Grid>
 </Window>

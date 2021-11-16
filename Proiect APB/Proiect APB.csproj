@@ -35,12 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-<<<<<<< HEAD
     <ApplicationIcon>Icons8-Windows-8-Cinema-The-Flash-Sign.ico</ApplicationIcon>
-=======
     <ApplicationIcon>
     </ApplicationIcon>
->>>>>>> 276d2093779cdff34ee6fcb9aedeefbd6a1de453
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -120,11 +117,8 @@
     <Resource Include="electric_logo.jpg" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Resource Include="Icons8-Windows-8-Cinema-The-Flash-Sign.ico" />
-=======
     <Resource Include="empire_logo.png" />
->>>>>>> 276d2093779cdff34ee6fcb9aedeefbd6a1de453
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
