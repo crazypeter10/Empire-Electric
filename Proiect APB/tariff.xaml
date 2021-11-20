@@ -1,0 +1,25 @@
+﻿<Window x:Class="Proiect_APB.tariff"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proiect_APB"
+        mc:Ignorable="d"
+        Title="tariff" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:EmpireElectricDataSet x:Key="empireElectricDataSet"/>
+        <CollectionViewSource x:Key="tariffViewSource" Source="{Binding tariff, Source={StaticResource empireElectricDataSet}}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource tariffViewSource}">
+        <DataGrid x:Name="tariffDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="130,22,127,103" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="tariff_idColumn" Binding="{Binding tariff_id}" Header="tariff id" IsReadOnly="True" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="tariff_typeColumn" Binding="{Binding tariff_type}" Header="tariff type" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="tariff_descriptionColumn" Binding="{Binding tariff_description}" Header="tariff description" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="statusColumn" Binding="{Binding status}" Header="status" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="64,363,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+    </Grid>
+</Window>

@@ -22,41 +22,36 @@ using System.Data.SqlClient;
 namespace Proiect_APB
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for admin_login.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class admin_login : Window
     {
-
         SqlConnection con;
         SqlCommand cmd;
         SqlDataReader dr;
-
-
-        public MainWindow()
+        public admin_login()
         {
             InitializeComponent();
-            con = new SqlConnection("server=DESKTOP-HFLVEU6; Initial Catalog=EmpireElectric;Integrated Security=SSPI");
+            con = new SqlConnection("server=LAPTOP-TTDFATU1; Initial Catalog=EmpireElectric;Integrated Security=SSPI");
         }
-
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string user = txtUser.Text;
-            string pass = txtPass.Text;
+            string user = admin_name.Text;
+            string pass = admin_pass.Text;
             cmd = new SqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM customer where email_id='" + txtUser.Text + "' AND passsword='" + txtPass.Text + "'";
+            cmd.CommandText = "SELECT * FROM admin where login_id='" + admin_name.Text + "' AND password='" + admin_pass.Text + "'";
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-               
-
-             
+                         
+                System.Windows.MessageBox.Show("Login as admin :sucess!");
                 this.Hide();
-                var form2 = new Window1();
-                form2.Closed += (s, args) => this.Close();
-                form2.Show();
+                var form2 = new admin_window1();
+            //    form2.Closed += (s, args) => this.Close();
+               // form2.Show();
             }
             else
                 System.Windows.MessageBox.Show("Invalid Login please check username and password");
@@ -67,28 +62,8 @@ namespace Proiect_APB
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            // System.Windows.Forms.Application.Exit();
-            System.Environment.Exit(1);
-        }
-
-        private void UserBox_MouseLeftButtonDown(object sender, RoutedEventArgs e)
-        {
-            txtUser.Text = "";
-            //txtUser.Foreground = SystemColors.
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
             this.Hide();
-            var form2 = new admin_login();
-            form2.Closed += (s, args) => this.Close();
-            form2.Show();
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            var form2 = new sign_up();
+            var form2 = new MainWindow();
             form2.Closed += (s, args) => this.Close();
             form2.Show();
         }

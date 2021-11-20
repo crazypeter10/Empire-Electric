@@ -17,6 +17,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Proiect_APB
 {
@@ -34,19 +35,17 @@ namespace Proiect_APB
         public Window1()
         {
             InitializeComponent();
-            con = new SqlConnection("server=DESKTOP-D5T114U\\SQLEXPRESS; Initial Catalog=electricitybill;Integrated Security=SSPI");
+            con = new SqlConnection("server=DESKTOP-HFLVEU6; Initial Catalog=EmpireElectric;Integrated Security=SSPI");
+     
         }
         //logout
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string status = "off";
-            string status2 = "on";
+     
             cmd = new SqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "UPDATE customer SET status=@status where status=@status2";
-            cmd.Parameters.AddWithValue("@status", status);
-            cmd.Parameters.AddWithValue("@status2", status2);
+          
             this.Hide();
             var form2 = new MainWindow();
             form2.Closed += (s, args) => this.Close();
@@ -58,7 +57,7 @@ namespace Proiect_APB
             con.Open();
             cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT name,address FROM account where cust_id=1 ";
+            cmd.CommandText = "SELECT name,address FROM account where account_id=1 ";
            dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -68,6 +67,36 @@ namespace Proiect_APB
             }
             con.Close();
             //this.Text_1.Text += "Hello World!";
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            var form2 = new tariff();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            Proiect_APB.EmpireElectricDataSet empireElectricDataSet = ((Proiect_APB.EmpireElectricDataSet)(this.FindResource("empireElectricDataSet")));
+            // Load data into the table tariff. You can modify this code as needed.
+            Proiect_APB.EmpireElectricDataSetTableAdapters.tariffTableAdapter empireElectricDataSettariffTableAdapter = new Proiect_APB.EmpireElectricDataSetTableAdapters.tariffTableAdapter();
+            empireElectricDataSettariffTableAdapter.Fill(empireElectricDataSet.tariff);
+            System.Windows.Data.CollectionViewSource tariffViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("tariffViewSource")));
+            tariffViewSource.View.MoveCurrentToFirst();
+        }
+        //FEEDBACK
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            var form2 = new feedback();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
         }
     }
 }

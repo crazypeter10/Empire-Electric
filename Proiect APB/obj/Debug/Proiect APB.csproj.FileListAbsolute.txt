@@ -79,3 +79,36 @@ C:\Proiect APB\Empire-Electric\Proiect APB\obj\Debug\Window1.baml
 >>>>>>> Stashed changes
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window1.g.cs
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window1.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.exe.config
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.exe
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\bin\Debug\Proiect APB.pdb
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\bin\Debug\System.Data.SqlClient.dll
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\bin\Debug\System.Data.SqlClient.xml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.AssemblyReference.cache
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.SuggestedBindingRedirects.cache
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\MainWindow.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window1.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\App.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB_MarkupCompile.cache
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB_MarkupCompile.lref
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\MainWindow.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window1.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.g.resources
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect_APB.Properties.Resources.resources
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.GenerateResource.cache
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.CoreCompileInputs.cache
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csproj.CopyComplete
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.exe
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.pdb
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB.csprojAssemblyReference.cache
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_login.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_window1.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\sing_up.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_login.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_window1.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\sing_up.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\feedback.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\tariff.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\feedback.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\tariff.baml

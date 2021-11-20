@@ -45,7 +45,7 @@
         <Rectangle Grid.Column="1" Fill="#FFEDF1B6" HorizontalAlignment="Left" Height="420" Stroke="Black" VerticalAlignment="Top" Width="227" Grid.ColumnSpan="2"/>
         <Image HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="227" Source="empire_logo.png" Grid.Column="1" Grid.ColumnSpan="2" Stretch="UniformToFill" RenderTransformOrigin="0.527,0.5"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="395.8,56,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-        <Button Content="Sign Up" Grid.Column="2" HorizontalAlignment="Left" Margin="428.8,321,0,0" VerticalAlignment="Top" Width="80" Height="40" RenderTransformOrigin="1,0.5">
+        <Button Content="Sign Up" Grid.Column="2" HorizontalAlignment="Left" Margin="428.8,321,0,0" VerticalAlignment="Top" Width="80" Height="40" RenderTransformOrigin="1,0.5" Click="Button_Click_3">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -58,7 +58,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-            <Button Content="Admin Login" Grid.Column="2" HorizontalAlignment="Left" Margin="220.8,370,0,0" VerticalAlignment="Top" Width="80" Height="40" RenderTransformOrigin="1,0.5">
+            <Button Content="Admin Login" Grid.Column="2" HorizontalAlignment="Left" Margin="220.8,370,0,0" VerticalAlignment="Top" Width="80" Height="40" RenderTransformOrigin="1,0.5" Click="Button_Click_2">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
