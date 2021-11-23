@@ -4,27 +4,82 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proiect_APB"
-            xmlns:sys="clr-namespace:System;assembly=mscorlib"
-
         mc:Ignorable="d"
-        Title="User Info" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Dashboard" Height="450" Width="800">
     <Window.Resources>
         <local:EmpireElectricDataSet x:Key="empireElectricDataSet"/>
         <CollectionViewSource x:Key="tariffViewSource" Source="{Binding tariff, Source={StaticResource empireElectricDataSet}}"/>
     </Window.Resources>
-    <Grid DataContext="{StaticResource tariffViewSource}">
-        <Button Content="Profile" HorizontalAlignment="Left" Margin="78,68,0,0" VerticalAlignment="Top" Width="88" Height="31" Click="Button_Click_1"/>
-        <Button Content="Tariffs" HorizontalAlignment="Left" Margin="78,135,0,0" VerticalAlignment="Top" Width="88" Height="31" Click="Button_Click_2"/>
-        <Button Content="Sign off" HorizontalAlignment="Left" Margin="78,332,0,0" VerticalAlignment="Top" Width="88" Height="31" Click="Button_Click"/>
-        <Button Content="Feedback" HorizontalAlignment="Left" Margin="78,269,0,0" VerticalAlignment="Top" Width="88" Height="31" Click="Button_Click_3"/>
-        <Button Content="Monthly Pay" HorizontalAlignment="Left" Margin="78,203,0,0" VerticalAlignment="Top" Width="88" Height="31"/>
-        <TextBlock x:Name="Text_1" HorizontalAlignment="Left" Margin="229,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="499" FontFamily="SimSun" FontSize="26" Foreground="#FFEAEAEA" Text="Bine ai venit!">
-            <TextBlock.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF941616" Offset="1"/>
+    <Grid DataContext="{StaticResource tariffViewSource}" Background="#FF062536">
+        <DockPanel HorizontalAlignment="Left" Height="419" LastChildFill="False" VerticalAlignment="Top" Width="220">
+            <Image Height="116" VerticalAlignment="Top" Width="218" Source="empire_logo_text.png"/>
+        </DockPanel>
+        <Button Content="Profile" HorizontalAlignment="Left" Margin="0,217,0,0" VerticalAlignment="Top" Width="220" Height="35" Click="Button_Click_1">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF837521" Offset="0.15"/>
+                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
                 </LinearGradientBrush>
-            </TextBlock.Background>
+            </Button.Background>
+        </Button>
+        <Button Content="Tariffs" HorizontalAlignment="Left" Margin="0,297,0,0" VerticalAlignment="Top" Width="220" Height="35">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF837521" Offset="0.15"/>
+                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Sign off" HorizontalAlignment="Left" Margin="0,377,0,0" VerticalAlignment="Top" Width="220" Height="35" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF837521" Offset="0.15"/>
+                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Feedback" HorizontalAlignment="Left" Margin="0,337,0,0" VerticalAlignment="Top" Width="220" Height="35">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF837521" Offset="0.15"/>
+                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Monthly Pay" HorizontalAlignment="Left" Margin="0,257,0,0" VerticalAlignment="Top" Width="220" Height="35">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF837521" Offset="0.15"/>
+                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="Text_1" HorizontalAlignment="Left" Margin="225,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="185" Width="557" FontFamily="SimSun" FontSize="26" Foreground="#FFEAEAEA" Text="Welcome Back!">
             <TextBlock.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>

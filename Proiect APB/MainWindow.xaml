@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proiect_APB"
         mc:Ignorable="d"
-        Title="Empire Electric" Height="450" Width="676.8">
-    <Grid>
+        Title="Empire Electric" Height="390" Width="676.8">
+    <Grid Background="#FF062536">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="13*"/>
             <ColumnDefinition Width="781*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Log In " HorizontalAlignment="Left" Margin="303.8,321,0,0" VerticalAlignment="Top" Width="80" Height="40" Click="Button_Click" Grid.Column="2">
+        <Button Content="Log In " HorizontalAlignment="Left" Margin="334,250,0,0" VerticalAlignment="Top" Width="153" Height="32" Click="Button_Click" Grid.Column="2">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -25,7 +25,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="592.2,370,0,0" VerticalAlignment="Top" Width="47" Height="40" Click="Button_Click_1" Grid.Column="2">
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="601,309,0,0" VerticalAlignment="Top" Width="47" Height="40" Click="Button_Click_1" Grid.Column="2">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -38,14 +38,14 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="327.8,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Foreground="Black" />
-        <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="327.8,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" RenderTransformOrigin="0.5,0.5" Foreground="Black"/>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="327.8,151,0,0" VerticalAlignment="Top" Height="23" Width="73" RenderTransformOrigin="0.474,0.434" Grid.Column="2" FontFamily="Segoe UI Semibold"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="327.8,219,0,0" VerticalAlignment="Top" Height="23" Grid.Column="2" Width="73" FontFamily="Segoe UI Semibold"/>
+        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="334,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Foreground="Black" />
+        <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="334,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" RenderTransformOrigin="0.5,0.5" Foreground="Black"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="334,95,0,0" VerticalAlignment="Top" Height="23" Width="73" RenderTransformOrigin="0.474,0.434" Grid.Column="2" FontFamily="Segoe UI Semibold" Foreground="#FFE2D9D9"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="334,163,0,0" VerticalAlignment="Top" Height="23" Grid.Column="2" Width="73" FontFamily="Segoe UI Semibold" Foreground="#FFE2D9D9"/>
         <Rectangle Grid.Column="1" Fill="#FFEDF1B6" HorizontalAlignment="Left" Height="420" Stroke="Black" VerticalAlignment="Top" Width="227" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="227" Source="empire_logo.png" Grid.Column="1" Grid.ColumnSpan="2" Stretch="UniformToFill" RenderTransformOrigin="0.527,0.5"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="395.8,56,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-        <Button Content="Sign Up" Grid.Column="2" HorizontalAlignment="Left" Margin="428.8,321,0,0" VerticalAlignment="Top" Width="80" Height="40" RenderTransformOrigin="1,0.5" Click="Button_Click_3">
+        <Image HorizontalAlignment="Left" Height="359" VerticalAlignment="Top" Width="227" Source="empire_logo_cropped.png" Grid.Column="1" Grid.ColumnSpan="2" RenderTransformOrigin="0.602,0.5" Stretch="UniformToFill"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="396,28,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Foreground="#FFFBFBFB"/>
+        <Button Content="Sign Up" Grid.Column="2" HorizontalAlignment="Left" Margin="334,309,0,0" VerticalAlignment="Top" Width="153" Height="30" RenderTransformOrigin="1,0.5" Click="Button_Click_3">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -58,18 +58,19 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-            <Button Content="Admin Login" Grid.Column="2" HorizontalAlignment="Left" Margin="220.8,370,0,0" VerticalAlignment="Top" Width="80" Height="40" RenderTransformOrigin="1,0.5" Click="Button_Click_2">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FFCDB839" Offset="0"/>
-                        <GradientStop Color="#FFEDF1B6" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+        <Button Content="Admin Login" Grid.Column="2" HorizontalAlignment="Left" Margin="221,10,0,0" VerticalAlignment="Top" Width="80" Height="40" RenderTransformOrigin="1,0.5" Click="Button_Click_2">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCDB839" Offset="0"/>
+                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="402,288,0,0" TextWrapping="Wrap" Text="or" VerticalAlignment="Top" Foreground="#FFE2D9D9"/>
     </Grid>
 </Window>

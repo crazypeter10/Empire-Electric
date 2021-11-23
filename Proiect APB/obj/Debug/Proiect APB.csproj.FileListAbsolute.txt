@@ -112,3 +112,14 @@ C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\feedback.g.cs
 C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\tariff.g.cs
 C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\feedback.baml
 C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\tariff.baml
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_login.g.cs
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_window1.g.cs
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\feedback.g.cs
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\sing_up.g.cs
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\tariff.g.cs
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_login.baml
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_window1.baml
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\feedback.baml
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\sing_up.baml
+C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\tariff.baml

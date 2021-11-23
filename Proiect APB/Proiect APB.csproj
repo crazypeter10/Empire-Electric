@@ -187,5 +187,8 @@
     <Resource Include="Icons8-Windows-8-Cinema-The-Flash-Sign.ico" />
     <Resource Include="empire_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="empire_logo_text.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

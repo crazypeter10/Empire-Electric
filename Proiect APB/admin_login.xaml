@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proiect_APB"
         mc:Ignorable="d"
-        Title="Administrator Login" Height="450" Width="509.045">
-    <Grid>
+        Title="Administrator Login" Height="450" Width="426.545">
+    <Grid Background="#FF062536">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="299*"/>
             <ColumnDefinition Width="202*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Log in" HorizontalAlignment="Left" Margin="252,234,0,0" VerticalAlignment="Top" Height="30" Width="120" Click="Button_Click" Grid.ColumnSpan="2">
+        <Button Content="Log in" HorizontalAlignment="Left" Margin="138,279,0,0" VerticalAlignment="Top" Height="30" Width="120" Click="Button_Click" Grid.ColumnSpan="2">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -24,7 +24,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Go Back" HorizontalAlignment="Left" Margin="120.881,379,0,0" VerticalAlignment="Top" Height="30" Width="66" Click="Button_Click_1" Grid.Column="1">
+        <Button Content="Go Back" HorizontalAlignment="Left" Margin="93,379,0,0" VerticalAlignment="Top" Height="30" Width="66" Click="Button_Click_1" Grid.Column="1">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -37,13 +37,12 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="Login ID" HorizontalAlignment="Left" Margin="252,74,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Grid.ColumnSpan="2" Width="61"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="252,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.949" FontFamily="Segoe UI Semibold" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="admin_name" HorizontalAlignment="Left" Margin="252,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="admin_pass" HorizontalAlignment="Left" Margin="252,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <Rectangle Fill="#FFEAEAB0" HorizontalAlignment="Left" Height="419" Stroke="Black" VerticalAlignment="Top" Width="164"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,12,0,0" TextWrapping="Wrap" Text="If not an administrator, please do not use this login!" VerticalAlignment="Top" Height="90" Width="141" FontFamily="Segoe UI Semilight" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="236,10,0,0" TextWrapping="Wrap" Text="Administrator Login" VerticalAlignment="Top" Height="44" Width="165" FontSize="18" FontFamily="Segoe UI Semibold" Grid.ColumnSpan="2"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="138,119,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Foreground="#FFEAE0E0"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="138,188,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.949" FontFamily="Segoe UI Semibold" Foreground="#FFEAE0E0"/>
+        <TextBox x:Name="admin_name" HorizontalAlignment="Left" Margin="138,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="admin_pass" HorizontalAlignment="Left" Margin="138,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="122,55,0,0" TextWrapping="Wrap" Text="Administrator Login" VerticalAlignment="Top" Height="44" Width="165" FontSize="18" FontFamily="Segoe UI Semibold" Grid.ColumnSpan="2" Foreground="#FFEAE0E0"/>
+        <Label Content="Welcome Back!" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.949" FontFamily="Segoe UI Semibold" Foreground="#FFEAE0E0" Height="41" Width="101" FontSize="13"/>
 
     </Grid>
 </Window>
