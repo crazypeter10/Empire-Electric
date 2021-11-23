@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("empire_logo_text.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("empire_logo_basic.png")]
 
 

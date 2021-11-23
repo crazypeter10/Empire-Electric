@@ -6,8 +6,11 @@
         xmlns:local="clr-namespace:Proiect_APB"
         mc:Ignorable="d"
         Title="Sign Up" Height="450" Width="763.438">
-    <Grid>
-        <Rectangle Fill="#FFEAEAB0" HorizontalAlignment="Left" Height="419" Stroke="Black" VerticalAlignment="Top" Width="164"/>
+    <Grid Background="#FF062536" Margin="0,0,2,0">
+        <DockPanel HorizontalAlignment="Left" Height="419" LastChildFill="False" VerticalAlignment="Top" Width="158" Background="#FF11384D">
+            <Image Height="194" VerticalAlignment="Top" Width="157" Source="empire_logo_basic.png"/>
+        </DockPanel>
+
         <Button Content="Create Account" HorizontalAlignment="Left" Margin="403,302,0,0" VerticalAlignment="Top" Height="34" Width="128" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -35,7 +38,7 @@
             </Button.Background>
         </Button>
 
-        <Label Content="Customer Name" HorizontalAlignment="Left" Margin="180,92,0,0" VerticalAlignment="Top" Height="28" Width="157" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold">
+        <Label Content="Customer Name" HorizontalAlignment="Left" Margin="180,92,0,0" VerticalAlignment="Top" Height="28" Width="157" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold" Foreground="#FFD8CFCF">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -47,24 +50,24 @@
         </Label>
         <TextBox x:Name="nameTxt" HorizontalAlignment="Left" Margin="185,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
         <TextBox x:Name="account_typeTxt" HorizontalAlignment="Left" Margin="185,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
-        <Label Content="Account type(customer/buyer)" HorizontalAlignment="Left" Margin="185,157,0,0" VerticalAlignment="Top" Width="204" FontFamily="Segoe UI Semibold"/>
-        <Label Content="Adress" HorizontalAlignment="Left" Margin="185,214,0,0" VerticalAlignment="Top" Width="102" FontFamily="Segoe UI Semibold"/>
+        <Label Content="Account type(customer/buyer)" HorizontalAlignment="Left" Margin="185,157,0,0" VerticalAlignment="Top" Width="204" FontFamily="Segoe UI Semibold" Foreground="#FFD8CFCF"/>
+        <Label Content="Adress" HorizontalAlignment="Left" Margin="185,214,0,0" VerticalAlignment="Top" Width="102" FontFamily="Segoe UI Semibold" Foreground="#FFD8CFCF"/>
         <TextBox x:Name="adressTxt" HorizontalAlignment="Left" Margin="185,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="16"/>
         <TextBox x:Name="stateTxt" HorizontalAlignment="Center" Margin="403,121,204,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextChanged="stateTxt_TextChanged"/>
         <TextBox x:Name="cityTxt" HorizontalAlignment="Center" Margin="403,185,204,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
         <TextBox x:Name="pincodeTxt" HorizontalAlignment="Center" Margin="403,240,204,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
         <TextBox x:Name="emailTxt" HorizontalAlignment="Left" Margin="613,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="passwordTxt" HorizontalAlignment="Left" Margin="613,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="State" HorizontalAlignment="Left" Margin="403,95,0,0" VerticalAlignment="Top" Width="103" FontFamily="Segoe UI Semibold"/>
-        <Label Content="City" HorizontalAlignment="Center" Margin="403,157,232,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe UI Semibold"/>
-        <Label Content="Pin" HorizontalAlignment="Left" Margin="403,214,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="613,95,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="613,157,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
-        <Label Content="CNP" HorizontalAlignment="Left" Margin="613,209,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" RenderTransformOrigin="0.796,0.514"/>
+        <Label Content="State" HorizontalAlignment="Left" Margin="403,95,0,0" VerticalAlignment="Top" Width="103" FontFamily="Segoe UI Semibold" Foreground="#FFD8CFCF"/>
+        <Label Content="City" HorizontalAlignment="Center" Margin="403,157,232,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe UI Semibold" Foreground="#FFD8CFCF"/>
+        <Label Content="Pin" HorizontalAlignment="Left" Margin="403,214,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Foreground="#FFD8CFCF"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="613,95,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Foreground="#FFD8CFCF"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="613,157,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Foreground="#FFD8CFCF"/>
+        <Label Content="CNP" HorizontalAlignment="Left" Margin="613,209,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" RenderTransformOrigin="0.796,0.514" Foreground="#FFD8CFCF"/>
         <TextBox x:Name="cnpTxt" HorizontalAlignment="Left" Margin="613,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="428,30,0,0" TextWrapping="Wrap" Text="Sign Up" VerticalAlignment="Top" Height="28" Width="73" FontSize="18" FontFamily="Segoe UI Semibold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="451,352,0,0" TextWrapping="Wrap" Text="or" VerticalAlignment="Top" Height="18" Width="35" FontSize="14" FontFamily="Segoe UI Symbol"/>
-        <TextBlock HorizontalAlignment="Left" Margin="19,76,0,0" TextWrapping="Wrap" Text="Best bang for the buck on the whole continent!" VerticalAlignment="Top" Height="251" Width="116" FontSize="18" FontFamily="Segoe UI Symbol"/>
+        <TextBlock HorizontalAlignment="Left" Margin="405,28,0,0" TextWrapping="Wrap" Text="Sign Up" VerticalAlignment="Top" Height="28" Width="73" FontSize="18" FontFamily="Segoe UI Semibold" Foreground="#FFD8CFCF"/>
+        <TextBlock HorizontalAlignment="Left" Margin="460,346,0,0" TextWrapping="Wrap" Text="or" VerticalAlignment="Top" Height="18" Width="18" FontSize="14" FontFamily="Segoe UI Symbol" Foreground="#FFD8CFCF" RenderTransformOrigin="0.951,0.194"/>
+
 
     </Grid>
 </Window>
