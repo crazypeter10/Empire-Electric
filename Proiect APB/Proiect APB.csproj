@@ -190,5 +190,8 @@
   <ItemGroup>
     <Resource Include="empire_logo_text.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="empire_logo_basic.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
