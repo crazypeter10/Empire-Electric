@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmpireElectricModelStoreContainer" CdmEntityContainer="EmpireElectricEntities">
+    <EntitySetMapping Name="accounts">
+      <EntityTypeMapping TypeName="EmpireElectricModel.account">
+        <MappingFragment StoreEntitySet="account">
+          <ScalarProperty Name="account_id" ColumnName="account_id" />
+          <ScalarProperty Name="cust_id" ColumnName="cust_id" />
+          <ScalarProperty Name="account_no" ColumnName="account_no" />
+          <ScalarProperty Name="electricity_board_id" ColumnName="electricity_board_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="rr_number" ColumnName="rr_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="billings">
+      <EntityTypeMapping TypeName="EmpireElectricModel.billing">
+        <MappingFragment StoreEntitySet="billing">
+          <ScalarProperty Name="bill_no" ColumnName="bill_no" />
+          <ScalarProperty Name="cust_id" ColumnName="cust_id" />
+          <ScalarProperty Name="account_id" ColumnName="account_id" />
+          <ScalarProperty Name="payment_mode" ColumnName="payment_mode" />
+          <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+          <ScalarProperty Name="payment_time" ColumnName="payment_time" />
+          <ScalarProperty Name="rr_number" ColumnName="rr_number" />
+          <ScalarProperty Name="bill_amount" ColumnName="bill_amount" />
+          <ScalarProperty Name="paid_amount" ColumnName="paid_amount" />
+          <ScalarProperty Name="excess_paid" ColumnName="excess_paid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="EmpireElectricModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="cust_id" ColumnName="cust_id" />
+          <ScalarProperty Name="cust_name" ColumnName="cust_name" />
+          <ScalarProperty Name="account_type" ColumnName="account_type" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="passsword" ColumnName="passsword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="electricity_board">
+      <EntityTypeMapping TypeName="EmpireElectricModel.electricity_board">
+        <MappingFragment StoreEntitySet="electricity_board">
+          <ScalarProperty Name="electricity_board_id" ColumnName="electricity_board_id" />
+          <ScalarProperty Name="electricity_board1" ColumnName="electricity_board" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedbacks">
+      <EntityTypeMapping TypeName="EmpireElectricModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+          <ScalarProperty Name="cust_id" ColumnName="cust_id" />
+          <ScalarProperty Name="feedback1" ColumnName="feedback" />
+          <ScalarProperty Name="feedback_date" ColumnName="feedback_date" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invoices">
+      <EntityTypeMapping TypeName="EmpireElectricModel.invoice">
+        <MappingFragment StoreEntitySet="invoice">
+          <ScalarProperty Name="invoice_id" ColumnName="invoice_id" />
+          <ScalarProperty Name="electricity_board_id" ColumnName="electricity_board_id" />
+          <ScalarProperty Name="account_id" ColumnName="account_id" />
+          <ScalarProperty Name="tariff_id" ColumnName="tariff_id" />
+          <ScalarProperty Name="readingdate" ColumnName="readingdate" />
+          <ScalarProperty Name="bil_no" ColumnName="bil_no" />
+          <ScalarProperty Name="present_reading" ColumnName="present_reading" />
+          <ScalarProperty Name="previous_reading" ColumnName="previous_reading" />
+          <ScalarProperty Name="consumption_unit" ColumnName="consumption_unit" />
+          <ScalarProperty Name="fixed_charge" ColumnName="fixed_charge" />
+          <ScalarProperty Name="energy_charge" ColumnName="energy_charge" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="bill_amount" ColumnName="bill_amount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="previous_balance" ColumnName="previous_balance" />
+          <ScalarProperty Name="others" ColumnName="others" />
+          <ScalarProperty Name="credit" ColumnName="credit" />
+          <ScalarProperty Name="consession" ColumnName="consession" />
+          <ScalarProperty Name="net_amount" ColumnName="net_amount" />
+          <ScalarProperty Name="due_date" ColumnName="due_date" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EmpireElectricModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tariffs">
+      <EntityTypeMapping TypeName="EmpireElectricModel.tariff">
+        <MappingFragment StoreEntitySet="tariff">
+          <ScalarProperty Name="tariff_id" ColumnName="tariff_id" />
+          <ScalarProperty Name="tariff_type" ColumnName="tariff_type" />
+          <ScalarProperty Name="tariff_description" ColumnName="tariff_description" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="EmpireElectricModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="admin_name" ColumnName="admin_name" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="admin_type" ColumnName="admin_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="EmpireElectricModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="EmpireElectricModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="EmpireElectricModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="EmpireElectricModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpireElectricModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="EmpireElectricModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpireElectricModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EmpireElectricModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EmpireElectricModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

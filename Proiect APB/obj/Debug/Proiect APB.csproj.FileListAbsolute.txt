@@ -123,3 +123,14 @@ C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_window1.
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\feedback.baml
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\sing_up.baml
 C:\Users\Admin\source\repos\Empire-Electric\Proiect APB\obj\Debug\tariff.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Proiect APB_Content.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\bin\Debug\EntityFramework.dll
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\bin\Debug\EntityFramework.xml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window2.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\Window2.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_feedbacks.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_mo_pay.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_tarrifs.g.cs
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_feedbacks.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_mo_pay.baml
+C:\Users\vasia\source\repos\Empire-Electric\Proiect APB\obj\Debug\admin_tarrifs.baml

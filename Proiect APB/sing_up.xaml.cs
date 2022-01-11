@@ -17,7 +17,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Data.Entity;
 
 namespace Proiect_APB
 {
@@ -29,33 +29,63 @@ namespace Proiect_APB
         SqlConnection con;
         SqlCommand cmd;
         SqlDataReader dr;
+        EmpireElectricEntities ctx = new EmpireElectricEntities();
 
         public sign_up()
         {
             InitializeComponent();
-            con = new SqlConnection("server=DESKTOP-HFLVEU6; Initial Catalog=EmpireElectric;Integrated Security=SSPI");
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            cmd = new SqlCommand();
-            con.Open();
-            cmd.Connection = con;
+            //cmd = new SqlCommand();
+            //con.Open();
+            //cmd.Connection = con;
 
-            cmd.CommandText = "INSERT INTO customer (cust_id,cust_name, account_type, adress, state, city, pincode,email_id,passsword) values('" + cnpTxt.Text + "','" + nameTxt.Text + "','" + account_typeTxt.Text + "','" + adressTxt.Text + "','" + stateTxt.Text + "','" + cityTxt.Text + "','" + pincodeTxt.Text + "','" + emailTxt.Text + "','" + passwordTxt.Text + "')" +
-                "INSERT INTO account (cust_id,name, address,account_no,electricity_board_id) values('" + cnpTxt.Text + "','" + nameTxt.Text + "','" + adressTxt.Text + "','1','1')";
+            //cmd.CommandText = "INSERT INTO customer (cust_id,cust_name, account_type, adress, state, city, pincode,email_id,passsword) values('" + cnpTxt.Text + "','" + nameTxt.Text + "','" + account_typeTxt.Text + "','" + adressTxt.Text + "','" + stateTxt.Text + "','" + cityTxt.Text + "','" + pincodeTxt.Text + "','" + emailTxt.Text + "','" + passwordTxt.Text + "')" +
+            //    "INSERT INTO account (cust_id,name, address,account_no,electricity_board_id) values('" + cnpTxt.Text + "','" + nameTxt.Text + "','" + adressTxt.Text + "','1','1')";
 
-            cmd.ExecuteNonQuery();
+            //cmd.ExecuteNonQuery();
+            //System.Windows.MessageBox.Show("Account created!");
+
+
+            //con.Close();
+            string name = nameTxt.Text;
+            string accountt=account_typeTxt.Text;
+            string adress=adressTxt.Text;
+            string state=stateTxt.Text;
+            string city=cityTxt.Text;   
+            
+            int pin = Convert.ToInt32(pincodeTxt.Text);
+            string email=emailTxt.Text;
+            string password=passwordTxt.Text;
+            int cnp = Convert.ToInt32(cnpTxt.Text);
+            
+
+
+            customer cust = new customer();
+
+            cust.state = state;
+            cust.city = city;
+            cust.pincode = pin.ToString();
+            cust.email_id = email;
+            cust.cust_name = name;
+            cust.city=city;
+            cust.passsword= password;
+            cust.adress = adress;
+            cust.cust_id = cnp;
+            ctx.customers.Add(cust);
+            ctx.SaveChanges();
             System.Windows.MessageBox.Show("Account created!");
 
 
-            con.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
             this.Hide();
             var form2 = new MainWindow();
             form2.Closed += (s, args) => this.Close();

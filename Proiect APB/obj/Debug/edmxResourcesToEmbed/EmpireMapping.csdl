@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpireElectricModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="account_id" />
+    </Key>
+    <Property Name="account_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cust_id" Type="Int32" Nullable="false" />
+    <Property Name="account_no" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="electricity_board_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rr_number" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__account__cust_id__2E1BDC42" FromRole="account" ToRole="customer" />
+    <NavigationProperty Name="electricity_board" Relationship="Self.FK__account__electri__2F10007B" FromRole="account" ToRole="electricity_board" />
+    <NavigationProperty Name="billings" Relationship="Self.FK__billing__account__32E0915F" FromRole="account" ToRole="billing" />
+    <NavigationProperty Name="invoices" Relationship="Self.FK__invoice__account__36B12243" FromRole="account" ToRole="invoice" />
+  </EntityType>
+  <EntityType Name="billing">
+    <Key>
+      <PropertyRef Name="bill_no" />
+    </Key>
+    <Property Name="bill_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cust_id" Type="Int32" Nullable="false" />
+    <Property Name="account_id" Type="Int32" Nullable="false" />
+    <Property Name="payment_mode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="payment_date" Type="DateTime" Precision="0" />
+    <Property Name="payment_time" Type="Time" Precision="7" />
+    <Property Name="rr_number" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="bill_amount" Type="Double" />
+    <Property Name="paid_amount" Type="Double" />
+    <Property Name="excess_paid" Type="Double" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="account" Relationship="Self.FK__billing__account__32E0915F" FromRole="billing" ToRole="account" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__billing__cust_id__31EC6D26" FromRole="billing" ToRole="customer" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="cust_id" />
+    </Key>
+    <Property Name="cust_id" Type="Int32" Nullable="false" />
+    <Property Name="cust_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="account_type" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pincode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email_id" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="passsword" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="accounts" Relationship="Self.FK__account__cust_id__2E1BDC42" FromRole="customer" ToRole="account" />
+    <NavigationProperty Name="billings" Relationship="Self.FK__billing__cust_id__31EC6D26" FromRole="customer" ToRole="billing" />
+    <NavigationProperty Name="feedbacks" Relationship="Self.FK__feedback__cust_i__2B3F6F97" FromRole="customer" ToRole="feedback" />
+  </EntityType>
+  <EntityType Name="electricity_board">
+    <Key>
+      <PropertyRef Name="electricity_board_id" />
+    </Key>
+    <Property Name="electricity_board_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="electricity_board1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="logo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="accounts" Relationship="Self.FK__account__electri__2F10007B" FromRole="electricity_board" ToRole="account" />
+    <NavigationProperty Name="invoices" Relationship="Self.FK__invoice__electri__35BCFE0A" FromRole="electricity_board" ToRole="invoice" />
+  </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="feedback_id" />
+    </Key>
+    <Property Name="feedback_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cust_id" Type="Int32" Nullable="false" />
+    <Property Name="feedback1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="feedback_date" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__feedback__cust_i__2B3F6F97" FromRole="feedback" ToRole="customer" />
+  </EntityType>
+  <EntityType Name="invoice">
+    <Key>
+      <PropertyRef Name="invoice_id" />
+    </Key>
+    <Property Name="invoice_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="electricity_board_id" Type="Int32" Nullable="false" />
+    <Property Name="account_id" Type="Int32" Nullable="false" />
+    <Property Name="tariff_id" Type="Int32" Nullable="false" />
+    <Property Name="readingdate" Type="DateTime" Precision="0" />
+    <Property Name="bil_no" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="present_reading" Type="Double" />
+    <Property Name="previous_reading" Type="Double" />
+    <Property Name="consumption_unit" Type="Double" />
+    <Property Name="fixed_charge" Type="Double" />
+    <Property Name="energy_charge" Type="Double" />
+    <Property Name="tax" Type="Double" />
+    <Property Name="bill_amount" Type="Double" />
+    <Property Name="interest" Type="Double" />
+    <Property Name="previous_balance" Type="Double" />
+    <Property Name="others" Type="Double" />
+    <Property Name="credit" Type="Double" />
+    <Property Name="consession" Type="Double" />
+    <Property Name="net_amount" Type="Double" />
+    <Property Name="due_date" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="account" Relationship="Self.FK__invoice__account__36B12243" FromRole="invoice" ToRole="account" />
+    <NavigationProperty Name="electricity_board" Relationship="Self.FK__invoice__electri__35BCFE0A" FromRole="invoice" ToRole="electricity_board" />
+    <NavigationProperty Name="tariff" Relationship="Self.FK__invoice__tariff___37A5467C" FromRole="invoice" ToRole="tariff" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tariff">
+    <Key>
+      <PropertyRef Name="tariff_id" />
+    </Key>
+    <Property Name="tariff_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tariff_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tariff_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="invoices" Relationship="Self.FK__invoice__tariff___37A5467C" FromRole="tariff" ToRole="invoice" />
+  </EntityType>
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="admin_id" />
+      <PropertyRef Name="login_id" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="admin_type" />
+    </Key>
+    <Property Name="admin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="admin_name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="login_id" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="admin_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__account__cust_id__2E1BDC42">
+    <End Role="customer" Type="Self.customer" Multiplicity="1" />
+    <End Role="account" Type="Self.account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="cust_id" />
+      </Principal>
+      <Dependent Role="account">
+        <PropertyRef Name="cust_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__account__electri__2F10007B">
+    <End Role="electricity_board" Type="Self.electricity_board" Multiplicity="1" />
+    <End Role="account" Type="Self.account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="electricity_board">
+        <PropertyRef Name="electricity_board_id" />
+      </Principal>
+      <Dependent Role="account">
+        <PropertyRef Name="electricity_board_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__billing__account__32E0915F">
+    <End Role="account" Type="Self.account" Multiplicity="1" />
+    <End Role="billing" Type="Self.billing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="account">
+        <PropertyRef Name="account_id" />
+      </Principal>
+      <Dependent Role="billing">
+        <PropertyRef Name="account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invoice__account__36B12243">
+    <End Role="account" Type="Self.account" Multiplicity="1" />
+    <End Role="invoice" Type="Self.invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="account">
+        <PropertyRef Name="account_id" />
+      </Principal>
+      <Dependent Role="invoice">
+        <PropertyRef Name="account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__billing__cust_id__31EC6D26">
+    <End Role="customer" Type="Self.customer" Multiplicity="1" />
+    <End Role="billing" Type="Self.billing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="cust_id" />
+      </Principal>
+      <Dependent Role="billing">
+        <PropertyRef Name="cust_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__feedback__cust_i__2B3F6F97">
+    <End Role="customer" Type="Self.customer" Multiplicity="1" />
+    <End Role="feedback" Type="Self.feedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="cust_id" />
+      </Principal>
+      <Dependent Role="feedback">
+        <PropertyRef Name="cust_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invoice__electri__35BCFE0A">
+    <End Role="electricity_board" Type="Self.electricity_board" Multiplicity="1" />
+    <End Role="invoice" Type="Self.invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="electricity_board">
+        <PropertyRef Name="electricity_board_id" />
+      </Principal>
+      <Dependent Role="invoice">
+        <PropertyRef Name="electricity_board_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invoice__tariff___37A5467C">
+    <End Role="tariff" Type="Self.tariff" Multiplicity="1" />
+    <End Role="invoice" Type="Self.invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tariff">
+        <PropertyRef Name="tariff_id" />
+      </Principal>
+      <Dependent Role="invoice">
+        <PropertyRef Name="tariff_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmpireElectricEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="accounts" EntityType="Self.account" />
+    <EntitySet Name="billings" EntityType="Self.billing" />
+    <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="electricity_board" EntityType="Self.electricity_board" />
+    <EntitySet Name="feedbacks" EntityType="Self.feedback" />
+    <EntitySet Name="invoices" EntityType="Self.invoice" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="tariffs" EntityType="Self.tariff" />
+    <EntitySet Name="admins" EntityType="Self.admin" />
+    <AssociationSet Name="FK__account__cust_id__2E1BDC42" Association="Self.FK__account__cust_id__2E1BDC42">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="account" EntitySet="accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__account__electri__2F10007B" Association="Self.FK__account__electri__2F10007B">
+      <End Role="electricity_board" EntitySet="electricity_board" />
+      <End Role="account" EntitySet="accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__billing__account__32E0915F" Association="Self.FK__billing__account__32E0915F">
+      <End Role="account" EntitySet="accounts" />
+      <End Role="billing" EntitySet="billings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invoice__account__36B12243" Association="Self.FK__invoice__account__36B12243">
+      <End Role="account" EntitySet="accounts" />
+      <End Role="invoice" EntitySet="invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__billing__cust_id__31EC6D26" Association="Self.FK__billing__cust_id__31EC6D26">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="billing" EntitySet="billings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__feedback__cust_i__2B3F6F97" Association="Self.FK__feedback__cust_i__2B3F6F97">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="feedback" EntitySet="feedbacks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invoice__electri__35BCFE0A" Association="Self.FK__invoice__electri__35BCFE0A">
+      <End Role="electricity_board" EntitySet="electricity_board" />
+      <End Role="invoice" EntitySet="invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invoice__tariff___37A5467C" Association="Self.FK__invoice__tariff___37A5467C">
+      <End Role="tariff" EntitySet="tariffs" />
+      <End Role="invoice" EntitySet="invoices" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(EmpireElectricModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(EmpireElectricModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

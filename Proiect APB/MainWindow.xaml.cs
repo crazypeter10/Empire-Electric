@@ -16,7 +16,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.Data.Entity;
+
 
 
 namespace Proiect_APB
@@ -27,15 +28,15 @@ namespace Proiect_APB
     public partial class MainWindow : Window
     {
 
-        SqlConnection con;
-        SqlCommand cmd;
-        SqlDataReader dr;
+        //SqlConnection con;
+        //SqlCommand cmd;
+        //SqlDataReader dr;
 
-
+        EmpireElectricEntities ctx = new EmpireElectricEntities();
         public MainWindow()
         {
-            InitializeComponent();
-            con = new SqlConnection("server=DESKTOP-HFLVEU6; Initial Catalog=EmpireElectric;Integrated Security=SSPI");
+           InitializeComponent();
+        //    con = new SqlConnection("server=DESKTOP-HFLVEU6; Initial Catalog=EmpireElectric;Integrated Security=SSPI");
         }
 
 
@@ -43,25 +44,40 @@ namespace Proiect_APB
         {
             string user = txtUser.Text;
             string pass = txtPass.Text;
-            cmd = new SqlCommand();
-            con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM customer where email_id='" + txtUser.Text + "' AND passsword='" + txtPass.Text + "'";
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-               
+            //cmd = new SqlCommand();
+            //con.Open();
+            //cmd.Connection = con;
+            //cmd.CommandText = "SELECT * FROM customer where email_id='" + txtUser.Text + "' AND passsword='" + txtPass.Text + "'";
+            //dr = cmd.ExecuteReader();
+            //if (dr.Read())
+            //{
 
-             
-                this.Hide();
-                var form2 = new Window1();
-                form2.Closed += (s, args) => this.Close();
-                form2.Show();
+
+
+            //    this.Hide();
+            //    var form2 = new Window1();
+            //    form2.Closed += (s, args) => this.Close();
+            //    form2.Show();
+            //}
+            //else
+            //    System.Windows.MessageBox.Show("Invalid Login please check username and password");
+
+            //con.Close();
+
+            //using (var context = new EmpireMapping() )
+
+            var q = (from a in ctx.customers
+                     where a.email_id.Equals(user) && a.passsword.Equals(pass)
+                     select a).FirstOrDefault();
+            if (q!=null)
+            {  this.Hide();
+            admin_Window1 form2 = new admin_Window1(user);
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+
             }
             else
                 System.Windows.MessageBox.Show("Invalid Login please check username and password");
-
-            con.Close();
 
         }
 
@@ -92,5 +108,10 @@ namespace Proiect_APB
             form2.Closed += (s, args) => this.Close();
             form2.Show();
         }
+       
+
     }
+
+
+
 }

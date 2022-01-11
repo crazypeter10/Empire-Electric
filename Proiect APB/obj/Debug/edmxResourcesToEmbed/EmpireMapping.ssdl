@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpireElectricModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="account_id" />
+    </Key>
+    <Property Name="account_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cust_id" Type="int" Nullable="false" />
+    <Property Name="account_no" Type="varchar" MaxLength="25" />
+    <Property Name="electricity_board_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="address" Type="text" />
+    <Property Name="rr_number" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'EmpireElectric.dbo.admin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="admin_id" />
+      <PropertyRef Name="login_id" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="admin_type" />
+    </Key>
+    <Property Name="admin_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="admin_name" Type="varchar" MaxLength="25" />
+    <Property Name="login_id" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="admin_type" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="billing">
+    <Key>
+      <PropertyRef Name="bill_no" />
+    </Key>
+    <Property Name="bill_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cust_id" Type="int" Nullable="false" />
+    <Property Name="account_id" Type="int" Nullable="false" />
+    <Property Name="payment_mode" Type="varchar" MaxLength="25" />
+    <Property Name="payment_date" Type="date" />
+    <Property Name="payment_time" Type="time" Precision="7" />
+    <Property Name="rr_number" Type="varchar" MaxLength="25" />
+    <Property Name="bill_amount" Type="float" />
+    <Property Name="paid_amount" Type="float" />
+    <Property Name="excess_paid" Type="float" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="cust_id" />
+    </Key>
+    <Property Name="cust_id" Type="int" Nullable="false" />
+    <Property Name="cust_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="account_type" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="adress" Type="text" />
+    <Property Name="state" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pincode" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="email_id" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="passsword" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="electricity_board">
+    <Key>
+      <PropertyRef Name="electricity_board_id" />
+    </Key>
+    <Property Name="electricity_board_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="electricity_board" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="logo" Type="varchar" MaxLength="100" />
+    <Property Name="note" Type="text" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="feedback_id" />
+    </Key>
+    <Property Name="feedback_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cust_id" Type="int" Nullable="false" />
+    <Property Name="feedback" Type="text" />
+    <Property Name="feedback_date" Type="date" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="invoice">
+    <Key>
+      <PropertyRef Name="invoice_id" />
+    </Key>
+    <Property Name="invoice_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="electricity_board_id" Type="int" Nullable="false" />
+    <Property Name="account_id" Type="int" Nullable="false" />
+    <Property Name="tariff_id" Type="int" Nullable="false" />
+    <Property Name="readingdate" Type="date" />
+    <Property Name="bil_no" Type="varchar" MaxLength="25" />
+    <Property Name="present_reading" Type="float" />
+    <Property Name="previous_reading" Type="float" />
+    <Property Name="consumption_unit" Type="float" />
+    <Property Name="fixed_charge" Type="float" />
+    <Property Name="energy_charge" Type="float" />
+    <Property Name="tax" Type="float" />
+    <Property Name="bill_amount" Type="float" />
+    <Property Name="interest" Type="float" />
+    <Property Name="previous_balance" Type="float" />
+    <Property Name="others" Type="float" />
+    <Property Name="credit" Type="float" />
+    <Property Name="consession" Type="float" />
+    <Property Name="net_amount" Type="float" />
+    <Property Name="due_date" Type="date" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tariff">
+    <Key>
+      <PropertyRef Name="tariff_id" />
+    </Key>
+    <Property Name="tariff_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tariff_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tariff_description" Type="text" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK__account__cust_id__2E1BDC42">
+    <End Role="customer" Type="Self.customer" Multiplicity="1" />
+    <End Role="account" Type="Self.account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="cust_id" />
+      </Principal>
+      <Dependent Role="account">
+        <PropertyRef Name="cust_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__account__electri__2F10007B">
+    <End Role="electricity_board" Type="Self.electricity_board" Multiplicity="1" />
+    <End Role="account" Type="Self.account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="electricity_board">
+        <PropertyRef Name="electricity_board_id" />
+      </Principal>
+      <Dependent Role="account">
+        <PropertyRef Name="electricity_board_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__billing__account__32E0915F">
+    <End Role="account" Type="Self.account" Multiplicity="1" />
+    <End Role="billing" Type="Self.billing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="account">
+        <PropertyRef Name="account_id" />
+      </Principal>
+      <Dependent Role="billing">
+        <PropertyRef Name="account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__billing__cust_id__31EC6D26">
+    <End Role="customer" Type="Self.customer" Multiplicity="1" />
+    <End Role="billing" Type="Self.billing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="cust_id" />
+      </Principal>
+      <Dependent Role="billing">
+        <PropertyRef Name="cust_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__feedback__cust_i__2B3F6F97">
+    <End Role="customer" Type="Self.customer" Multiplicity="1" />
+    <End Role="feedback" Type="Self.feedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="cust_id" />
+      </Principal>
+      <Dependent Role="feedback">
+        <PropertyRef Name="cust_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invoice__account__36B12243">
+    <End Role="account" Type="Self.account" Multiplicity="1" />
+    <End Role="invoice" Type="Self.invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="account">
+        <PropertyRef Name="account_id" />
+      </Principal>
+      <Dependent Role="invoice">
+        <PropertyRef Name="account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invoice__electri__35BCFE0A">
+    <End Role="electricity_board" Type="Self.electricity_board" Multiplicity="1" />
+    <End Role="invoice" Type="Self.invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="electricity_board">
+        <PropertyRef Name="electricity_board_id" />
+      </Principal>
+      <Dependent Role="invoice">
+        <PropertyRef Name="electricity_board_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invoice__tariff___37A5467C">
+    <End Role="tariff" Type="Self.tariff" Multiplicity="1" />
+    <End Role="invoice" Type="Self.invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tariff">
+        <PropertyRef Name="tariff_id" />
+      </Principal>
+      <Dependent Role="invoice">
+        <PropertyRef Name="tariff_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="EmpireElectricModelStoreContainer">
+    <EntitySet Name="account" EntityType="Self.account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="billing" EntityType="Self.billing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="electricity_board" EntityType="Self.electricity_board" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="feedback" EntityType="Self.feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="invoice" EntityType="Self.invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tariff" EntityType="Self.tariff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="admin" EntityType="Self.admin" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[admin].[admin_id] AS [admin_id], 
+[admin].[admin_name] AS [admin_name], 
+[admin].[login_id] AS [login_id], 
+[admin].[password] AS [password], 
+[admin].[admin_type] AS [admin_type]
+FROM [dbo].[admin] AS [admin]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__account__cust_id__2E1BDC42" Association="Self.FK__account__cust_id__2E1BDC42">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="account" EntitySet="account" />
+    </AssociationSet>
+    <AssociationSet Name="FK__account__electri__2F10007B" Association="Self.FK__account__electri__2F10007B">
+      <End Role="electricity_board" EntitySet="electricity_board" />
+      <End Role="account" EntitySet="account" />
+    </AssociationSet>
+    <AssociationSet Name="FK__billing__account__32E0915F" Association="Self.FK__billing__account__32E0915F">
+      <End Role="account" EntitySet="account" />
+      <End Role="billing" EntitySet="billing" />
+    </AssociationSet>
+    <AssociationSet Name="FK__billing__cust_id__31EC6D26" Association="Self.FK__billing__cust_id__31EC6D26">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="billing" EntitySet="billing" />
+    </AssociationSet>
+    <AssociationSet Name="FK__feedback__cust_i__2B3F6F97" Association="Self.FK__feedback__cust_i__2B3F6F97">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="feedback" EntitySet="feedback" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invoice__account__36B12243" Association="Self.FK__invoice__account__36B12243">
+      <End Role="account" EntitySet="account" />
+      <End Role="invoice" EntitySet="invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invoice__electri__35BCFE0A" Association="Self.FK__invoice__electri__35BCFE0A">
+      <End Role="electricity_board" EntitySet="electricity_board" />
+      <End Role="invoice" EntitySet="invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invoice__tariff___37A5467C" Association="Self.FK__invoice__tariff___37A5467C">
+      <End Role="tariff" EntitySet="tariff" />
+      <End Role="invoice" EntitySet="invoice" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

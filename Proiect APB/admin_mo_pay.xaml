@@ -1,0 +1,54 @@
+﻿<Window x:Class="Proiect_APB.admin_mo_pay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proiect_APB"
+        mc:Ignorable="d"
+        Title="admin_mo_pay" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <TextBox x:Name="electricID" HorizontalAlignment="Left" Margin="42,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="accID" HorizontalAlignment="Left" Margin="188,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tarrifID" HorizontalAlignment="Center" Margin="0,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="bil_nombreTxt" HorizontalAlignment="Left" Margin="496,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="reading" HorizontalAlignment="Left" Margin="662,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="Data3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="18,10,18,176"/>
+        <TextBox x:Name="prevReading" HorizontalAlignment="Left" Margin="42,340,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="cons_unit" HorizontalAlignment="Left" Margin="187,339,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.695"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="fixedChargeTxt" HorizontalAlignment="Center" Margin="0,340,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="energy_chargeTxt" HorizontalAlignment="Left" Margin="496,340,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="taxTxt" HorizontalAlignment="Left" Margin="662,340,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Send Invoice" HorizontalAlignment="Left" Margin="690,368,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click"/>
+        <Label Content="Electricity board ID" HorizontalAlignment="Left" Margin="42,258,0,0" VerticalAlignment="Top"/>
+        <Label Content="account_id" HorizontalAlignment="Left" Margin="188,257,0,0" VerticalAlignment="Top"/>
+        <Label Content="tarriff_id" HorizontalAlignment="Left" Margin="338,258,0,0" VerticalAlignment="Top"/>
+        <Label Content="bill_no" HorizontalAlignment="Left" Margin="494,253,0,0" VerticalAlignment="Top"/>
+        <Label Content="present_reading" HorizontalAlignment="Left" Margin="660,261,0,0" VerticalAlignment="Top"/>
+        <Label HorizontalAlignment="Left" Margin="42,309,0,0" VerticalAlignment="Top"/>
+        <Label Content="consumpton unit" HorizontalAlignment="Left" Margin="188,311,0,0" VerticalAlignment="Top"/>
+        <Label Content="fixed charge" HorizontalAlignment="Left" Margin="340,311,0,0" VerticalAlignment="Top"/>
+        <Label Content="energy charge" HorizontalAlignment="Left" Margin="494,306,0,0" VerticalAlignment="Top"/>
+        <Label Content="tax" HorizontalAlignment="Left" Margin="662,309,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="bill_amountTxt" HorizontalAlignment="Left" Margin="42,396,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="bill amount " HorizontalAlignment="Left" Margin="47,357,0,0" VerticalAlignment="Top"/>
+        <Label Content="previous reading " HorizontalAlignment="Left" Margin="42,309,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="dueDate_TXT" HorizontalAlignment="Left" Margin="188,396,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="20.278,67.931"/>
+        <Label Content="due date " HorizontalAlignment="Left" Margin="188,365,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="userText" HorizontalAlignment="Left" Margin="504,362,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="104"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="690,399,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click_1"/>
+        <Label x:Name="L23" Content="Type here to update the invoice that was paid" HorizontalAlignment="Left" Margin="339,373,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="paidTxt" HorizontalAlignment="Left" Margin="345,406,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="20.278,67.931"/>
+        <Button Content="Paid" HorizontalAlignment="Left" Margin="583,404,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click4"/>
+        <Button Content="Late" HorizontalAlignment="Left" Margin="486,404,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click5"/>
+
+    </Grid>
+</Window>

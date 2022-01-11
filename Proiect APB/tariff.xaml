@@ -15,7 +15,7 @@
             <ColumnDefinition Width="161*"/>
             <ColumnDefinition Width="235*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="tariffDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="72,23,126,20" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.ColumnSpan="2" Background="#FF0E3C55" Foreground="#FFE2E2E2">
+        <DataGrid x:Name="tariffDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" Margin="72,23,126,20" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.ColumnSpan="2" Background="#FF0E3C55" Foreground="#FFE2E2E2" SelectionChanged="tariffDataGrid_SelectionChanged">
             <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
                     <Setter Property="Background" Value="#FF0E3C55"/>
@@ -26,6 +26,9 @@
                     <Setter Property="Background" Value="#FF0F3246" />
                 </Style>
             </DataGrid.Resources>
+            <DataGrid.ItemsSource>
+                <Binding Path="tariff" Source="{StaticResource empireElectricDataSet}"/>
+            </DataGrid.ItemsSource>
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="tariff_idColumn" Binding="{Binding tariff_id}" Header="ID" IsReadOnly="True" Width="*"/>
                 <DataGridTextColumn x:Name="tariff_typeColumn" Binding="{Binding tariff_type}" Header="Type" Width="3*"/>
@@ -47,6 +50,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <TextBlock x:Name="userText" Grid.Column="1" HorizontalAlignment="Left" Margin="370,334,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="90"/>
 
     </Grid>
 </Window>

@@ -1,0 +1,64 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proiect_APB"
+        xmlns:EmpireElectricDataSetTableAdapters="clr-namespace:Proiect_APB.EmpireElectricDataSetTableAdapters" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Proiect_APB.admin_tarrifs"
+        mc:Ignorable="d"
+        Title="admin_tarrifs" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="695,379,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click" Height="35                 " Grid.ColumnSpan="2" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCDB839" Offset="0"/>
+                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="userText" HorizontalAlignment="Left" Margin="695,334,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
+        <Button Content="Insert" HorizontalAlignment="Left" Margin="685,294,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click2" Height="35                 " Grid.ColumnSpan="2" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCDB839" Offset="0"/>
+                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="Text2" HorizontalAlignment="Left" Margin="678,249,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="104" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="Text1" HorizontalAlignment="Left" Margin="681,177,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="105" Grid.ColumnSpan="2"/>
+        <Label x:Name="Label1" Content="Price" HorizontalAlignment="Left" Margin="681,146,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="40"/>
+        <Label x:Name="Label2" Content="Tarrif Description" HorizontalAlignment="Left" Margin="681,211,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="Data1" Grid.ColumnSpan="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,23,161,0"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="678,106,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click3" Height="35                 " Grid.ColumnSpan="2" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCDB839" Offset="0"/>
+                    <GradientStop Color="#FFEDF1B6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="textDelete" HorizontalAlignment="Left" Margin="680,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="105" Grid.ColumnSpan="2"/>
+        <Label x:Name="LAbel" Content="Entry to be deleted" HorizontalAlignment="Left" Margin="680,23,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

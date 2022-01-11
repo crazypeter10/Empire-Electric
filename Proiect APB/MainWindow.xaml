@@ -40,7 +40,7 @@
         </Button>
         <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="334,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Foreground="Black" />
         <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="334,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" RenderTransformOrigin="0.5,0.5" Foreground="Black"/>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="334,95,0,0" VerticalAlignment="Top" Height="23" Width="73" RenderTransformOrigin="0.474,0.434" Grid.Column="2" FontFamily="Segoe UI Semibold" Foreground="#FFE2D9D9"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="334,95,0,0" VerticalAlignment="Top" Height="23" Width="73" RenderTransformOrigin="0.474,0.434" Grid.Column="2" FontFamily="Segoe UI Semibold" Foreground="#FFE2D9D9"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="334,163,0,0" VerticalAlignment="Top" Height="23" Grid.Column="2" Width="73" FontFamily="Segoe UI Semibold" Foreground="#FFE2D9D9"/>
         <Rectangle Grid.Column="1" Fill="#FFEDF1B6" HorizontalAlignment="Left" Height="420" Stroke="Black" VerticalAlignment="Top" Width="227" Grid.ColumnSpan="2"/>
         <Image HorizontalAlignment="Left" Height="359" VerticalAlignment="Top" Width="227" Source="empire_logo_cropped.png" Grid.Column="1" Grid.ColumnSpan="2" RenderTransformOrigin="0.602,0.5" Stretch="UniformToFill"/>
